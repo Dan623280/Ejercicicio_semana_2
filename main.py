@@ -1,4 +1,4 @@
-from Dicionario import Registro_clients
+from Dicionario import registro_clientes
 while True:
         print("\n---------Registrar venta----------")
         print("__________________________")
@@ -24,12 +24,17 @@ while True:
         print("\n-----------------------")
         
         if opcion ==1:
-            nombre = input("agregar nombre: ")
-            if nombre.replace(" ","").isalpha():
-                print(Registro_clients)
-                break
-            else:
-                print("Error: el nombre solo debe tener letras")
+            cliente = input("ID del cliente: ")
+            nombre = input("Nombre del cliente: ")
+            correo = input("agregar correo: ")
+        
 
-precio = float(input("agregue precio: "))
-cantidad = int(input("agregue cantidad: "))      
+        elif opcion ==2:
+            nombre_producto = input("Agregar producto: ")
+            precio = float(input("precio del producto: "))
+            cantidad = int(input("agregar cantidad: "))
+
+            total_pago = precio * cantidad
+            print("total del pago.")
+
+    
