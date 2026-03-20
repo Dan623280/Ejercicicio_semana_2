@@ -1,10 +1,12 @@
-from Dicionario import registro_productos, registro_clientes, Pedido
+from Dicionario import pedidos
 
 def calculo_ingresos():
-    total = 0
-    for pedido_unitario in Pedido.values():
 
-        total = total + pedido_unitario['Total_pedido']
+    total = 0
+
+    for pedido_unitario in pedidos.values():
+
+        total = total + pedido_unitario['precio']
         
     return total
 
