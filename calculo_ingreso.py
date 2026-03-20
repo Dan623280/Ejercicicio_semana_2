@@ -6,7 +6,7 @@ def calculo_ingresos():
 
     for pedido_unitario in pedidos.values():
 
-        total = total + pedido_unitario['precio']
+        total = total + pedido_unitario['precio_total']
         
     return total
 

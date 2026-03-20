@@ -8,11 +8,13 @@ def total_ingresos_total_pedidos():
     print("el total de ingresos generados es: ",calculo_ingresos())
 
 def pedidos_agrupados_y_productos():
+    
     personas = []
 
     for pedido in pedidos.values():
 
         if pedido['cliente'] in personas:
+
             continue
 
         else:
@@ -24,12 +26,14 @@ def pedidos_agrupados_y_productos():
         print(f"Estos son los pedidos del cliente {persona}")
 
         for pedido in pedidos.values():
-            
+
             if persona  == pedido['cliente']:
+
                 print("")
                 print(f"Producto: {pedido['producto']}")
                 print(f"Cantidad: {pedido['cantidad']}")
-                print(f"Precio: {pedido['precio']}")
+                print(f"precio unitario: {pedido['precio_unitario']}")
+                print(f"precio total: {pedido['precio_total']}")
                 print("")
 
     productos_agrupados = []

@@ -1,40 +1,47 @@
-from Dicionario import registro_clientes
-while True:
-        print("\n---------Registrar venta----------")
-        print("__________________________")
-        print("1.- Registrar cliente ")
-        print("__________________________")
-        print("__________________________")
-        print("2.- Regristrar producto")
-        print("__________________________")
-        print("_________________")
-        print("3.- Crear pedido")
-        print("_________________")
-        print("______________________")
-        print("4.- Consultar pedido")
-        print("_____________________")
-        print("____________________")
-        print("5.- Generar reportes")
-        print("____________________")
-        print("------------")
-        print("6.- Salir")
-        print("------------")
-        opcion = int(input("ingrese una opcion: "))
-        
-        print("\n-----------------------")
-        
-        if opcion ==1:
-            cliente = input("ID del cliente: ")
-            nombre = input("Nombre del cliente: ")
-            correo = input("agregar correo: ")
-        
 
-        elif opcion ==2:
-            nombre_producto = input("Agregar producto: ")
-            precio = float(input("precio del producto: "))
-            cantidad = int(input("agregar cantidad: "))
+from menu import menu
+from addClients import r_clientes
+from addproduct import r_productos
+from crear_pedido import crear_pedido
+from mostrar_pedido import pedido
+from calculo_ingreso import calculo_ingresos
+from Reporte import reporte
+while True: 
 
-            total_pago = precio * cantidad
-            print("total del pago.")
+    opcion =  menu()
 
-    
+
+
+    if opcion ==1:
+        
+        r_clientes()
+
+    elif opcion ==2:
+        
+        r_productos()
+
+    elif opcion == 3:
+        
+        crear_pedido()
+
+    elif opcion == 4:
+
+        pedido()
+        
+    elif opcion == 5:
+        
+        print(f"los ingresos obtenidos durante el dia: {calculo_ingresos()}")
+
+    elif opcion == 6:
+        print("")
+        print("Reporte")
+        reporte()
+        
+    elif opcion == 7:
+
+        break
+
+    else:
+
+        print("numero no valido")
+        

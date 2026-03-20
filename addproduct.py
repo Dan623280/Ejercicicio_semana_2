@@ -1,30 +1,25 @@
-from ast import Return
-
-from Dicionario import Registro_products
+from Dicionario import productos
 from Funciones_error import error_string
 from id import id_tabla
 
 # Diccionario de productos de el menu
-def registro_productos():
+def r_productos():
 
-    id_usuario = id_tabla(3)
-    nombre = error_string("el nombre: ")
-    precio = int(input("Precio: "))
+    id = id_tabla(productos)
+    nombre = error_string("nombre producto: ")
+    precio = error_string("Precio unitario: ")
 
-    
+    productos[id] = {"nombre_producto": nombre, "Precio_unitario": precio}
 
-    #Registro_products["id"] = id_usuario
-    #Registro_products["nombre"] = nombre
-    #Registro_products["precio"] = precio
- 
-    return {
-    "id" : id_usuario,
-    "nombre" : nombre,
-    "precio" : precio
-}
+    print("")
+    print("Registro actualizado exitiosamente")
+    print(f"nombre_producto: {nombre}")
+    print(f"Precio_unitario: {precio}")
+    print("")
 
-registro_productos()
-print(registro_productos(Registro_products))
+#para llamar
+#from addproduct import r_productos
+        
 
 
 

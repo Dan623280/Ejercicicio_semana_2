@@ -1,15 +1,21 @@
-from Dicionario import Registro_clients
+from Dicionario import clientes
 from Funciones_error import error_string
+from id import id_tabla
 
 # Diccionario de productos de el menu
+def r_clientes():
 
+    id = id_tabla(clientes)
+    nombre = error_string("nombre: ")
+    correo = error_string("correo: ")
 
-id = int(input("Ingrese su ID: "))
-nombre = error_string("Ingrese el nombre: ")
-correo = input("Ingrese el correo: ")
+    clientes[id] = {"nombre": nombre, "correo": correo}
 
-Registro_clients[id] = id
-Registro_clients["nombre"] = nombre
-Registro_clients["correo"] = correo
+    print("")
+    print("Registro actualizado exitiosamente")
+    print(f"nombre: {nombre}")
+    print(f"correo: {correo}")
+    print("")
 
-print(Registro_clients)
+#para llamar
+#from addClients import r_clientes
