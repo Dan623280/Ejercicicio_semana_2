@@ -1,7 +1,11 @@
 from Dicionario import  pedidos
 from calculo_ingreso import calculo_ingresos
-print("el total de pedidos registrados es: ",len(pedidos))
-print("el total de ingresos generados es: ",calculo_ingresos())
+
+def total_ingresos_total_pedidos():
+
+    print("el total de pedidos registrados es: ",len(pedidos))
+
+    print("el total de ingresos generados es: ",calculo_ingresos())
 
 def pedidos_agrupados_y_productos():
     personas = []
@@ -46,5 +50,12 @@ def pedidos_agrupados_y_productos():
 
         print(f"Producto: {producto}")
     
-        
-pedidos_agrupados_y_productos()            
+
+def reporte():
+
+    total_ingresos_total_pedidos()
+    pedidos_agrupados_y_productos()
+
+
+#para llamar
+#from Reporte import total_ingresos_total_pedidos, pedidos_agrupados_y_productos, reporte
