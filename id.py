@@ -1,5 +1,6 @@
 
-from Dicionario import pedidos, Clientes, productos
+from Dicionario import pedidos, registro_clientes, registro_productos
+from Color import rojo, reset
 
 def id_tabla(number):
     
@@ -15,22 +16,27 @@ def id_tabla(number):
         
     elif number == 2:
 
-        if len(Clientes) == 0:
+        if len(registro_clientes) == 0:
             
             return 1
         
         else:
 
-            return len(Clientes) +1
+            return len(registro_clientes) +1
         
     elif number == 3:
 
-        if len(productos) == 0:
+        if len(registro_productos) == 0:
             
             return 1
         
         else:
 
-            return len(productos) +1
+            return len(registro_productos) + 1
+    else:
+
+            #mensaje numero no valido
+            print(rojo + "==================")
+            print("=Numero no valido=")
+            print("=================="+reset)
         
-print(id_tabla())

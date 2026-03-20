@@ -10,7 +10,6 @@ pedidos = {
 
 }
 
-Clientes = {}
-
-productos = {}
+registro_productos = {}
+registro_clientes = {}
 
