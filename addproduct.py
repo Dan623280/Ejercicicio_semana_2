@@ -1,5 +1,10 @@
+#importa el dicionario donde se almacenan los productos
 from Dicionario import productos
+
+#importa la funcion de error de texto
 from Funciones_error import error_string
+
+#importa la funcion que devuelve el id de la tabla
 from id import id_tabla
 
 # Diccionario de productos de el menu
